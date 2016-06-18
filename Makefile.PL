@@ -53,27 +53,5 @@ if ($ENV{MTHURN_PERL_DEV})
 
 WriteAll;
 
-use Env;
-if (0 && $ENV{MTHURN_PERL_DEV})
-  {
-  print "DDD This is author's development environment\n";
-  my $sFnameMakefile = q{Makefile};
-  eval "use File::Slurp";
-  my $s = read_file($sFnameMakefile);
-  if ($s !~ s/(DIRFILESEP\s*=\s*).+$/$1\//m)
-    {
-    print " EEE did not find DIRFILESEP in Makefile\n";
-    } # if
-  if ($s !~ s/(pm_to_blib\(){{\@ARGV}}/$1 . '{@ARGV}'/e)
-    {
-    print " EEE did not find pm_to_blib@ARGV in Makefile\n";
-    } # if
-  if ($s !~ s/(from_to\s+=>\s+){{\@ARGV}}/$1 . '{@ARGV}'/e)
-    {
-    print " EEE did not find from_to@ARGV in Makefile\n";
-    } # if
-  write_file($sFnameMakefile, $s);
-  } # if
-
 __END__
 
