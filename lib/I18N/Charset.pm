@@ -67,7 +67,7 @@ functions will always return undef.
 #	Public Global Variables
 #-----------------------------------------------------------------------
 our
-$VERSION = do { my @r = (q$Revision: 1.414 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = 1.415;
 our @EXPORT = qw( iana_charset_name
 map8_charset_name
 umap_charset_name
@@ -641,7 +641,7 @@ sub add_iana_alias
 =item  add_map8_alias()
 
 This function takes two strings: a new alias, and a target
-Unicode::Map8 Character Set Name (or an exising alias to a Map8 name).
+Unicode::Map8 Character Set Name (or an existing alias to a Map8 name).
 It defines the new alias to refer to that mapping name (or to the
 mapping name to which the second alias refers).
 
