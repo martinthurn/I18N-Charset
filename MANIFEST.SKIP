@@ -4,11 +4,13 @@ character-sets
 charset-mib
 ^cover
 CVS
+.git
 \.html$
 ^I18N-Charset-
 ignore
 ^Makefile$
 ^MANIFEST\.
+MYMETA
 .old
 \bPAGES\b
 patch
