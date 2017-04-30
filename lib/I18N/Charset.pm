@@ -66,8 +66,10 @@ functions will always return undef.
 #-----------------------------------------------------------------------
 #	Public Global Variables
 #-----------------------------------------------------------------------
+
 our
-$VERSION = 1.416;
+$VERSION = 1.417;
+
 our @EXPORT = qw( iana_charset_name
 map8_charset_name
 umap_charset_name
