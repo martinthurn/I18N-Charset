@@ -2,7 +2,7 @@
 # iana.t - tests for Locale::Country
 
 use ExtUtils::testlib;
-use Test::More tests => 28;
+use Test::More;
 
 use IO::Capture::Stderr;
 my $oICE =  IO::Capture::Stderr->new;
@@ -57,7 +57,7 @@ my @asAll = I18N::Charset::all_iana_charset_names();
 my $iAll = scalar(@asAll);
 diag("There are $iAll IANA charset names registered");
 
-exit 0;
+done_testing();
 
 __END__
 
