@@ -68,7 +68,7 @@ functions will always return undef.
 #-----------------------------------------------------------------------
 
 our
-$VERSION = 1.417;
+$VERSION = 1.419;
 
 our @EXPORT = qw( iana_charset_name
 map8_charset_name
