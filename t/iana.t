@@ -2,7 +2,7 @@
 # iana.t - tests for Locale::Country
 
 use ExtUtils::testlib;
-use Test::More tests => 27;
+use Test::More tests => 28;
 
 use IO::Capture::Stderr;
 my $oICE =  IO::Capture::Stderr->new;
@@ -37,6 +37,7 @@ ok(iana_charset_name("x-x-sjis") eq "Shift_JIS", 'x-x-sjis');
 ok(iana_charset_name("Unicode-2-0-utf-8") eq "UTF-8", 'Unicode-2-0-utf-8');
 ok(iana_charset_name("ISO-8859-16") eq "ISO-8859-16", 'ISO-8859-16');
 ok(iana_charset_name("latin 10") eq "ISO-8859-16", 'latin 10');
+ok(iana_charset_name("csUTF7IMAP") eq "UTF-7-IMAP", 'UTF-7 IMAP');
 
  #---- some aliasing examples -----------------------------------------
 $oICE->start;
